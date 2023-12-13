@@ -1,0 +1,58 @@
+WEEKENDS
+
+CREATE TABLE `inspired-campus-379419.final.weekends_combined` AS
+SELECT 'Amsterdam' AS city, * FROM `inspired-campus-379419.final.amsterdam_weekends`
+UNION ALL
+SELECT 'Athens' AS city , * FROM `inspired-campus-379419.final.athens_weekends`
+UNION ALL
+SELECT 'Barcelona' as city, *  FROM `inspired-campus-379419.final.barcelona_weekends`
+UNION ALL
+SELECT 'Berlin' as city,* FROM `inspired-campus-379419.final.berlin_weekends`
+UNION ALL
+SELECT 'Budapest' as city , * FROM `inspired-campus-379419.final.budapest_weekends`
+UNION ALL
+SELECT 'Lisbon' as city , * FROM `inspired-campus-379419.final.lisbon_weekends`
+UNION ALL
+SELECT 'London' as city , * FROM `inspired-campus-379419.final.london_weekends`
+UNION ALL
+SELECT 'Paris' as city, * FROM `inspired-campus-379419.final.paris_weekends`
+UNION ALL
+SELECT 'Rome' as city , * FROM `inspired-campus-379419.final.rome_weekends`
+UNION ALL
+SELECT 'Vienna' as city, * FROM `inspired-campus-379419.final.vienna_weekends`
+
+
+
+WEEKDAYS
+
+
+CREATE TABLE `inspired-campus-379419.final.weekdays_combined` AS
+SELECT 'Amsterdam' AS city, * FROM `inspired-campus-379419.final.amsterdam_weekdays`
+UNION ALL
+SELECT 'Athens' AS city , * FROM `inspired-campus-379419.final.athens_weekdays`
+UNION ALL
+SELECT 'Barcelona' as city, *  FROM `inspired-campus-379419.final.barcelona_weekdays`
+UNION ALL
+SELECT 'Berlin' as city,* FROM `inspired-campus-379419.final.berlin_weekdays`
+UNION ALL
+SELECT 'Budapest' as city , * FROM `inspired-campus-379419.final.budapest_weekdays`
+UNION ALL
+SELECT 'Lisbon' as city , * FROM `inspired-campus-379419.final.lisbon_weekdays`
+UNION ALL
+SELECT 'London' as city , * FROM `inspired-campus-379419.final.london_weekdays`
+UNION ALL
+SELECT 'Paris' as city, * FROM `inspired-campus-379419.final.paris_weekdays`
+UNION ALL
+SELECT 'Rome' as city , * FROM `inspired-campus-379419.final.rome_weekdays`
+UNION ALL
+SELECT 'Vienna' as city, * FROM `inspired-campus-379419.final.vienna_weekdays`
+
+
+
+TOTALE
+
+
+CREATE TABLE `inspired-campus-379419.final.week_combined` AS
+SELECT 'weekday' AS day_type, * FROM `inspired-campus-379419.final.weekdays_combined`
+UNION ALL
+SELECT 'weekend' AS day_type, * FROM `inspired-campus-379419.final.weekends_combined`
